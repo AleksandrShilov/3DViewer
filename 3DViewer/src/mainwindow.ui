@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1015</width>
+    <height>671</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ActionsContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>3DViewer_1.0</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_open_f">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>10</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Обзор</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_open_f">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Открыть файл:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_proection">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Проекция:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_proection">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>290</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Параллельная</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Центральная</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_vertex_type">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>410</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Тип вершин:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_vertex_type">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>410</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Отсутствует</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Круг</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Квадрат</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_vertex_color">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>370</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цвет вершин:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_vertex_size">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Размер вершин:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_edge_color">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>490</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цвет рёбер:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_edge_size">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>570</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Толщина рёбер:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_edge_type">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>530</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Тип рёбер:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_edge_type">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>530</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Сплошная</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Пунктирная</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_background_color">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цвет фона:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_scale">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>610</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Масштаб:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_save">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>211</y>
+      <width>115</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сохранить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_rendering">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>255</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Отрисовка</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_file">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>10</y>
+      <width>141</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Файл: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_vertex">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>10</y>
+      <width>191</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вершин:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_edge">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>10</y>
+      <width>171</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Рёбер:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_move">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>550</y>
+      <width>81</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Движение:</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_x">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>610</y>
+      <width>65</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-99.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_y">
+    <property name="geometry">
+     <rect>
+      <x>437</x>
+      <y>610</y>
+      <width>65</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-99.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_z">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>610</y>
+      <width>65</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-99.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_vertex_size">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>450</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_edge_size">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>570</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="Widget" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>40</y>
+      <width>681</width>
+      <height>481</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_mashtab">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>610</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-99.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_jpeg">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>214</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>jpeg</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_bmp">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>214</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>bmp</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_gif">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>250</y>
+      <width>255</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Записать GIF</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_clear">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>255</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сбросить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_save_settings">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>255</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сохранить настройки</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_download_settings">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>255</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Загрузить настройки</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_turn_x">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>580</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_turn_y">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>580</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_turn_z">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>580</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_move_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>550</y>
+      <width>91</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вращение:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_color_edge">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>490</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выбрать цвет</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_vertex_color">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>370</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выбрать цвет</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_background_color">
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>330</y>
+      <width>131</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выбрать цвет</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_turn_z_2">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>580</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_turn_x_2">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>580</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_turn_y_2">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>580</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_move_z">
+    <property name="geometry">
+     <rect>
+      <x>893</x>
+      <y>610</y>
+      <width>65</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-99.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_move_y">
+    <property name="geometry">
+     <rect>
+      <x>783</x>
+      <y>610</y>
+      <width>65</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-99.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox_move_x">
+    <property name="geometry">
+     <rect>
+      <x>664</x>
+      <y>610</y>
+      <width>65</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-99.000000000000000</double>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1015</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Widget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>widget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
